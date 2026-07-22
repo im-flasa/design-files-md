@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primary Button - Tegel DS</title>
+    <style>
+      :root {
+        --page-bg: #f6f7f9;
+        --card-bg: #ffffff;
+        --text-color: #0b0c0f;
+        --button-bg: #16417f;
+        --button-bg-hover: #0f3263;
+        --button-bg-active: #041e42;
+        --button-text: #ffffff;
+        --border-color: #d1d7e0;
+      }
+
+      [data-theme="dark"] {
+        --page-bg: #0b0c0f;
+        --card-bg: #15181d;
+        --text-color: #f6f7f9;
+        --button-bg: #2a6ecf;
+        --button-bg-hover: #2058a8;
+        --button-bg-active: #16417f;
+        --border-color: #3a4554;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Scania Sans CY Semi Condensed", Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        background: var(--page-bg);
+        color: var(--text-color);
+        padding: 24px;
+      }
+
+      .wrapper {
+        display: grid;
+        gap: 20px;
+        width: min(720px, 100%);
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0 0 16px;
+        color: var(--text-color);
+        opacity: 0.8;
+      }
+
+      .btn-primary {
+        border: none;
+        border-radius: 4px;
+        padding: 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1;
+        background: var(--button-bg);
+        color: var(--button-text);
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--button-bg-hover);
+        transform: translateY(-1px);
+      }
+
+      .btn-primary:active {
+        background: var(--button-bg-active);
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="card">
+        <h2>Primary button - light mode</h2>
+        <p>Default state uses the documented light-mode primary token.</p>
+        <button class="btn-primary">Primary action</button>
+      </section>
+
+      <section class="card" data-theme="dark">
+        <h2>Primary button - dark mode</h2>
+        <p>Default state uses the documented dark-mode primary token.</p>
+        <button class="btn-primary">Primary action</button>
+      </section>
+    </div>
+  </body>
+</html>
